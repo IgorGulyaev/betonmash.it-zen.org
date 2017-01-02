@@ -27,3 +27,4 @@ sites/*/tmp
 sites/*/*/tmp
 */tmp
 
+.idea/
