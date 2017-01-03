@@ -216,6 +216,11 @@
         <?php endif; ?>
       </div>
       <div class="col-xs-12 col-sm-4">
+        <div class="back-top text-center">
+          <a href="#">
+            <i class="fa fa-arrow-circle-o-up"></i>
+          </a>
+        </div>
         <?php if (!empty($page['footer_middle'])): ?>
           <?php print render($page['footer_middle']); ?>
         <?php endif; ?>
