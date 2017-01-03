@@ -8,8 +8,11 @@ base theme = bootstrap
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
+regions[page_top]       = 'Page Top'
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
+regions[lang]           = 'Language Switcher'
+regions[cart]           = 'Mini Cart'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
