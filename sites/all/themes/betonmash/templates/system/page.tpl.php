@@ -207,10 +207,27 @@
   </div>
 </div>
 
-<?php if (!empty($page['footer'])): ?>
-  <footer class="footer">
-    <div class="<?php print $container_class; ?>">
-      <?php print render($page['footer']); ?>
+<footer class="footer">
+  <div class="<?php print $container_class; ?>">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <?php if (!empty($page['footer_left'])): ?>
+          <?php print render($page['footer_left']); ?>
+        <?php endif; ?>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <?php if (!empty($page['footer_middle'])): ?>
+          <?php print render($page['footer_middle']); ?>
+        <?php endif; ?>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <?php if (!empty($page['footer_right'])): ?>
+          <?php print render($page['footer_right']); ?>
+        <?php endif; ?>
+      </div>
     </div>
-  </footer>
-<?php endif; ?>
+    <?php if (!empty($page['footer'])): ?>
+      <?php print render($page['footer']); ?>
+    <?php endif; ?>
+  </div>
+</footer>
