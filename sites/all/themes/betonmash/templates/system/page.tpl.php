@@ -111,6 +111,11 @@
             <?php print render($page['lang']); ?>
           </div>
         <?php endif; ?>
+        <?php if (!empty($page['currency'])): ?>
+          <div class="currency col-xs-6 col-sm-2">
+            <?php print render($page['currency']); ?>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
