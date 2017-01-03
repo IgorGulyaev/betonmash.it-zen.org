@@ -111,11 +111,6 @@
             <?php print render($page['lang']); ?>
           </div>
         <?php endif; ?>
-        <?php if (!empty($page['cart'])): ?>
-          <div class="mini-cart col-xs-6 col-sm-2">
-            <?php print render($page['cart']); ?>
-          </div>
-        <?php endif; ?>
       </div>
     </div>
   </div>
@@ -123,18 +118,34 @@
     <div class="<?php print $container_class; ?>">
       <div class="navbar-header row">
         <?php if ($logo): ?>
-          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <a class="logo navbar-btn col-xs-3" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
           </a>
         <?php endif; ?>
 
-        <?php if (!empty($site_name)): ?>
-          <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-        <?php endif; ?>
+        <div class="header-contact col-xs-3">
+          <?php if (!empty($page['header_contact'])): ?>
+            <?php print render($page['header_contact']); ?>
+          <?php endif; ?>
+        </div>
 
-        <?php if (!empty($secondary_nav)): ?>
-          <?php print render($secondary_nav); ?>
-        <?php endif; ?>
+        <div class="header-search col-xs-3">
+          <?php if (!empty($page['search'])): ?>
+            <?php print render($page['search']); ?>
+          <?php endif; ?>
+        </div>
+
+        <div class="col-xs-6 col-sm-2">
+          <?php if (!empty($page['cart'])): ?>
+            <div class="mini-cart">
+              <?php print render($page['cart']); ?>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($secondary_nav)): ?>
+            <?php print render($secondary_nav); ?>
+          <?php endif; ?>
+        </div>
+
       </div>
     </div>
   </div>
